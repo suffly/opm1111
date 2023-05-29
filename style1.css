@@ -1,0 +1,200 @@
+/*
+    DEMO STYLE
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+body {
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+    body.modal-open {
+        overflow-y: hidden;
+    }
+
+
+/* Show in Large desktops and laptops */
+@media (min-width: 1200px) {
+    .jumbotron-image {
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 400px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 767px) {
+    .jumbotron-image {
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: 100px;
+    }
+}
+
+/* ---------------------------------------------------
+    Pager Style
+----------------------------------------------------- */
+.GridPager a {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    color: #3AC0F2;
+    font-weight: bold;
+    border: 1px solid #3AC0F2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.GridPager span {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-color: #09256c;
+    color: #3AC0F2;
+    font-weight: bold;
+    border: 1px solid #3AC0F2;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------
+    Radio Button
+----------------------------------------------------- */
+input[type=radio] {
+    transform: scale(2);
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* ---------------------------------------------------
+    Radio Button
+----------------------------------------------------- */
+input[type=checkbox] {
+    transform: scale(2);
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* ---------------------------------------------------
+    Tracking Bar
+----------------------------------------------------- */
+.bs4-order-tracking {
+    margin-bottom: 5px;
+    overflow: hidden;
+    color: #878788;
+    padding-left: 0px;
+    margin-top: 5px
+}
+
+    .bs4-order-tracking li {
+        list-style-type: none;
+        font-size: 13px;
+        width: 25%;
+        float: left;
+        position: relative;
+        font-weight: 400;
+        color: #878788;
+        text-align: center
+    }
+
+        .bs4-order-tracking li:first-child:before {
+            margin-left: 5px !important;
+            padding-left: 2px !important;
+            text-align: left !important
+        }
+
+        .bs4-order-tracking li:last-child:before {
+            margin-right: 5px !important;
+            padding-right: 2px !important;
+            text-align: right !important
+        }
+
+        .bs4-order-tracking li > div {
+            color: #fff;
+            width: 29px;
+            text-align: center;
+            line-height: 30px;
+            display: block;
+            font-size: 12px;
+            background: #878788;
+            border-radius: 50%;
+            margin: auto
+        }
+
+        .bs4-order-tracking li:after {
+            content: '';
+            width: 150%;
+            height: 2px;
+            background: #878788;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 15px;
+            z-index: -1
+        }
+
+        .bs4-order-tracking li:first-child:after {
+            left: 50%
+        }
+
+        .bs4-order-tracking li:last-child:after {
+            left: 0% !important;
+            width: 0% !important
+        }
+
+        .bs4-order-tracking li.active {
+            font-weight: bold;
+            color: #dc3545
+        }
+
+            .bs4-order-tracking li.active > div {
+                background: #dc3545
+            }
+
+            .bs4-order-tracking li.active:after {
+                background: #dc3545
+            }
+
+.card-timeline {
+    background-color: #fff;
+    z-index: 0
+}
+
+/* ---------------------------------------------------
+    Timeline Bar
+----------------------------------------------------- */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+    ul.timeline:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    ul.timeline > li {
+        margin: 20px 0;
+        padding-left: 20px;
+    }
+
+        ul.timeline > li:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #22c0e8;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
