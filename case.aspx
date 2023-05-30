@@ -1,10 +1,11 @@
-﻿<%@ Import Namespace="System.Data"%>
-<%@ Import Namespace="MySql.Data.MySqlClient"%>
-<%@ Import Namespace="System.Security.Cryptography"%>
-<%@ Import Namespace="System.IO"%>
+﻿<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="MySql.Data.MySqlClient" %>
+<%@ Import Namespace="System.Security.Cryptography" %>
+<%@ Import Namespace="System.IO" %>
 <%@ Register Src="header2.ascx" TagName="MyUserControl" TagPrefix="inc1" %>
 <%@ Register Src="footer2.ascx" TagName="MyUserControl" TagPrefix="inc2" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <%@ Page Language="VB" ContentType="text/html" %>
 
 <script runat="server">
@@ -273,7 +274,7 @@
         BindGrid(e.SortExpression, casecode.Text, doc_number.Text, datepicker.Text, contactname.Text, contactsurname.Text, channel.SelectedItem.Value, fast_level.SelectedItem.Value, summary.Text, remark.Text, createby.Text, chkstatus.Text)
     End Sub
 
-	</script>
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -297,19 +298,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!--Loading Screen-->
-        <script>
-            $(document).ready(function () {
-                $("#progressbar1").hide();
-            });
+    <script>
+        $(document).ready(function () {
+            $("#progressbar1").hide();
+        });
 
-        </script>
+    </script>
 
-     <%If Request.QueryString("saved") = "y" Then%>
-              <script type="text/javascript">
-                  $(window).on('load', function () {
-                      $('#myModal1').modal('show');
-                  });
-              </script>
+    <%If Request.QueryString("saved") = "y" Then%>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#myModal1').modal('show');
+        });
+    </script>
     <%          End If%>
 
 
@@ -320,8 +321,8 @@
     </script>
     <!--Loading Screen-->
 
-      <!-- Jquery DatePicker -->
- 	    <link rel="stylesheet" href="jquery.datetimepicker.css">
+    <!-- Jquery DatePicker -->
+    <link rel="stylesheet" href="jquery.datetimepicker.css">
     <script src="jquery.datetimepicker.full.js"></script>
     <script type="text/javascript">   
         $(function () {
@@ -400,214 +401,219 @@
 <body>
     <form id="form1" runat="server">
 
-            <!-- Header  -->
+        <!-- Header  -->
         <inc1:MyUserControl id="Header2" runat="server" />
         <!-- Header  -->
 
- <div class="progress" id="progressbar1" >
-  <div class="progress-bar progress-bar-striped progress-bar-animated"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
-</div>
+        <div class="progress" id="progressbar1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
 
-    <!-- Content-->         
-         <div class="card text-dark bg-light mx-auto col-lg-10 col-sm-12">
-              
-             <div class="card-header bg-primary">
-     <div class="d-flex justify-content-between">
-            <h2><i class="bi bi-list-stars"></i> รายการเรื่องร้องทุกข์ <span class="badge rounded-pill bg-info text-white"><asp:Label ID="lbTotalRecord" runat="server"></asp:Label></span></h2>
+        <!-- Content-->
+        <div class="card text-dark bg-light mx-auto col-lg-10 col-sm-12">
+
+            <div class="card-header bg-primary">
+                <div class="d-flex justify-content-between">
+                    <h2><i class="bi bi-list-stars"></i>รายการข้อปรึกษาหารือ <span class="badge rounded-pill bg-info text-white">
+                        <asp:Label ID="lbTotalRecord" runat="server"></asp:Label></span></h2>
                 </div>
-  </div>
-  <div class="card-body">
+            </div>
+            <div class="card-body">
 
 
-  <div class="card card-body bg-primary bg-opacity-10">
-      <div class="row">
-           <div class="col-sm-2">
-      <label for="casecode">รหัสเรื่อง:</label>
-              <asp:TextBox ID="casecode" runat="server" CssClass="form-control" />
-          </div>
-      <div class="col-sm-2">
-      <label for="doc_number">เลขที่หนังสือ:</label>
-              <asp:TextBox ID="doc_number" runat="server" CssClass="form-control" />
-          </div>
-      <div class="col-sm-2">
-       <label for="datepicker">ลงวันที่:</label>
-              <asp:TextBox ID="datepicker" runat="server" CssClass="form-control" AutoCompleteType="Disabled"  />
-          </div>
-      <div class="col-sm-2">
-     <label for="contactname">ชื่อผู้ร้อง :</label>
-              <asp:TextBox ID="contactname" runat="server" CssClass="form-control" />
-          </div>
-      <div class="col-sm-2">
-      <label for="contactsurname">นามสกุล :</label>
-              <asp:TextBox ID="contactsurname" runat="server" CssClass="form-control" />
-          </div>
-      <div class="col-sm-2">
-       <label for="channel">ที่มา :</label>
-         <asp:DropDownList ID="channel" runat="server" CssClass="form-select" AutoPostBack="false"></asp:DropDownList>
-          </div>
-      <div class="col-sm-2">
-      <label for="fast_level">ความเร่งด่วน :</label>
-              <asp:DropDownList ID="fast_level" runat="server" CssClass="form-select" AutoPostBack="false"></asp:DropDownList>
-          </div>
-      <div class="col-sm-2">
-       <label for="summary">สาระสำคัญของเรื่อง :</label>
-              <asp:TextBox ID="summary" runat="server" CssClass="form-control" />
-          </div>
-      <div class="col-sm-2">
-        <label for="remark">หมายเหตุ :</label>
-              <asp:TextBox ID="remark" runat="server" CssClass="form-control" />
-          </div>
-                <div class="col-sm-3">
-        <label for="createby">ผู้บันทึก :</label>
-              <asp:DropDownList ID="createby" runat="server" CssClass="form-select" ></asp:DropDownList>
-          </div>
-                <div class="col-sm-2">
-        <label for="remark">สถานะรับเรื่อง :</label>
-               <asp:DropDownList ID="chkstatus" runat="server" CssClass="form-select" AutoPostBack="false">
-                   <asp:ListItem Text="ทั้งหมด" Value="0"></asp:ListItem>
-                   <asp:ListItem Text="รับเรื่องแล้ว" Value="T"></asp:ListItem>
-                   <asp:ListItem Text="รอรับเรื่อง" Value="F"></asp:ListItem>
-               </asp:DropDownList>
-          </div>
-          </div>
-  </div>
-
-                 <div class="d-flex p-0 justify-content-center"> 
-                     <asp:Button ID="button1" runat="server" CssClass="btn btn-warning btn-md" OnClick="search" Text="ค้นหา" />
-                       <button id="Button2" Class="btn btn-secondary btn-md" runat="server" type="reset" >ล้าง</button>
-             </div>
-
-        <asp:UpdateProgress ID="updateProgress1" DynamicLayout="true" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
-            <ProgressTemplate>
-                          <div class="spinner-border text-danger" role="status">
-                          <span class="visually-hidden">Loading...</span>
+                <div class="card card-body bg-primary bg-opacity-10">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label for="casecode">รหัสเรื่อง:</label>
+                            <asp:TextBox ID="casecode" runat="server" CssClass="form-control" />
                         </div>
-            </ProgressTemplate>
-        </asp:UpdateProgress>
+                        <div class="col-sm-2">
+                            <label for="doc_number">เลขที่หนังสือ:</label>
+                            <asp:TextBox ID="doc_number" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="datepicker">ลงวันที่:</label>
+                            <asp:TextBox ID="datepicker" runat="server" CssClass="form-control" AutoCompleteType="Disabled" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="contactname">ชื่อผู้ร้อง :</label>
+                            <asp:TextBox ID="contactname" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="contactsurname">นามสกุล :</label>
+                            <asp:TextBox ID="contactsurname" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="channel">ที่มา :</label>
+                            <asp:DropDownList ID="channel" runat="server" CssClass="form-select" AutoPostBack="false"></asp:DropDownList>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="fast_level">ความเร่งด่วน :</label>
+                            <asp:DropDownList ID="fast_level" runat="server" CssClass="form-select" AutoPostBack="false"></asp:DropDownList>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="summary">สาระสำคัญของเรื่อง :</label>
+                            <asp:TextBox ID="summary" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="remark">หมายเหตุ :</label>
+                            <asp:TextBox ID="remark" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="createby">ผู้บันทึก :</label>
+                            <asp:DropDownList ID="createby" runat="server" CssClass="form-select"></asp:DropDownList>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="remark">สถานะรับเรื่อง :</label>
+                            <asp:DropDownList ID="chkstatus" runat="server" CssClass="form-select" AutoPostBack="false">
+                                <asp:ListItem Text="ทั้งหมด" Value="0"></asp:ListItem>
+                                <asp:ListItem Text="รับเรื่องแล้ว" Value="T"></asp:ListItem>
+                                <asp:ListItem Text="รอรับเรื่อง" Value="F"></asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                </div>
 
-                  <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-          <ContentTemplate>
+                <div class="d-flex p-0 justify-content-center">
+                    <asp:Button ID="button1" runat="server" CssClass="btn btn-warning btn-md" OnClick="search" Text="ค้นหา" />
+                    <button id="Button2" class="btn btn-secondary btn-md" runat="server" type="reset">ล้าง</button>
+                </div>
 
-          <div class="d-flex p-1 bg-light justify-content-center"> 
-            	 <asp:Label ID="lbFilterRecord" runat="server" ForeColor="#0000FF" Font-Bold="true" CssClass="p-1"></asp:Label>
-           </div>
+                <asp:UpdateProgress ID="updateProgress1" DynamicLayout="true" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+                    <ProgressTemplate>
+                        <div class="spinner-border text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
 
-      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered table-sm" PageSize="10" OnPageIndexChanging="OnPageIndexChanging" AllowPaging="True" AllowSorting="True" OnSorting="OnSorting" PagerSettings-Mode="NumericFirstLast" PagerSettings-PageButtonCount="10" PagerSettings-FirstPageText="|<<" PagerSettings-LastPageText=">>|" PagerSettings-PreviousPageText="<<" PagerSettings-NextPageText=">>" PagerStyle-CssClass="GridPager" PagerSettings-Position="TopAndBottom" >
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
 
-                 <Columns>
-         <asp:TemplateField HeaderText="ที่" HeaderStyle-CssClass="bg-primary text-white text-center" >
-            <ItemTemplate>
-                <%# Container.DataItemIndex + 1 %>
-            </ItemTemplate>
-            <itemstyle HorizontalAlign="center" Width="3%" />
-        </asp:TemplateField>
+                        <div class="d-flex p-1 bg-light justify-content-center">
+                            <asp:Label ID="lbFilterRecord" runat="server" ForeColor="#0000FF" Font-Bold="true" CssClass="p-1"></asp:Label>
+                        </div>
 
-              <asp:TemplateField HeaderText="รหัสเรื่อง"  HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:HyperLink ID="HyperLink1"  runat="server" NavigateUrl='<% # String.Format("case_detail.aspx?case_id={0}", Encrypt(Eval("case_id").ToString()))%>' Text='<%# DataBinder.Eval(Container, "DataItem.case_id") %>'></asp:HyperLink>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="5%" />
-              </asp:TemplateField>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered table-sm" PageSize="10" OnPageIndexChanging="OnPageIndexChanging" AllowPaging="True" AllowSorting="True" OnSorting="OnSorting" PagerSettings-Mode="NumericFirstLast" PagerSettings-PageButtonCount="10" PagerSettings-FirstPageText="|<<" PagerSettings-LastPageText=">>|" PagerSettings-PreviousPageText="<<" PagerSettings-NextPageText=">>" PagerStyle-CssClass="GridPager" PagerSettings-Position="TopAndBottom">
 
-               <asp:TemplateField HeaderText="เลขรับคำร้อง"  HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_number") = "", "-", Eval("doc_number")) %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="8%" />
-              </asp:TemplateField>
+                            <Columns>
+                                <asp:TemplateField HeaderText="ที่" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="3%" />
+                                </asp:TemplateField>
 
-                      <asp:TemplateField HeaderText="ลงวันที่"  HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_date").ToString() = "1/1/0544 0:00:00", "-", FormatDateTime(DataBinder.Eval(Container, "DataItem.doc_date"), 2)) %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="5%" />
-              </asp:TemplateField>
-              
-             <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="ผู้ร้อง">
-                  <ItemTemplate>
-                  <asp:Label ID="Label1" runat="server" Text='<%#If(Eval("contact") = "T", DataBinder.Eval(Container, "DataItem.name") & " " & DataBinder.Eval(Container, "DataItem.surname"), "ไม่ระบุ") %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="left" Width="15%" />
-              </asp:TemplateField>
+                                <asp:TemplateField HeaderText="รหัสเรื่อง" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<% # String.Format("case_detail.aspx?case_id={0}", Encrypt(Eval("case_id").ToString()))%>' Text='<%# DataBinder.Eval(Container, "DataItem.case_id") %>'></asp:HyperLink>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="5%" />
+                                </asp:TemplateField>
 
-                      <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="รายละเอียด">
-                  <ItemTemplate>
-                  <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.summary") %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="left" Width="20%" />
-              </asp:TemplateField>
-              
-              <asp:TemplateField HeaderText="วันที่บันทึกข้อมูล"  HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:Label ID="Label3" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.CREATE_DATE") %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="8%" />
-              </asp:TemplateField>
-              
-              <asp:TemplateField HeaderText="สถานะ"  HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:Label ID="Label4" runat="server" CssClass="text-success bi bi-envelope-open" Visible='<%#If(DataBinder.Eval(Container, "DataItem.STATUS").ToString() = "T", True, False) %>'></asp:Label>
-                       <asp:Label ID="Label5" runat="server" CssClass="text-danger bi bi-envelope" Visible='<%#If(DataBinder.Eval(Container, "DataItem.STATUS").ToString() = "F", True, False) %>'></asp:Label>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="5%" />
-              </asp:TemplateField>
-              
-                    <asp:TemplateField HeaderText="การดำเนินการ" HeaderStyle-CssClass="bg-primary text-white text-center">
-                  <ItemTemplate>
-                      <asp:HyperLink ID="HyperLink3"  runat="server" NavigateUrl='<%# String.Format("case_operation.aspx?case_code={0}", Encrypt(Eval("case_code").ToString())) %>' CssClass="bi bi-pencil-square" Target="_blank" Visible='<%# if(Eval("case_code").ToString() = "", False, True) %>' ></asp:HyperLink>
-                  </ItemTemplate>
-                  <itemstyle HorizontalAlign="center" Width="8%" />
-              </asp:TemplateField>
+                                <asp:TemplateField HeaderText="เลขรับคำร้อง" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_number") = "", "-", Eval("doc_number")) %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="8%" />
+                                </asp:TemplateField>
 
-          </Columns>
-      </asp:GridView>
-              
-  </ContentTemplate>
-            <Triggers>
-        	<asp:AsyncPostBackTrigger ControlID="GridView1" EventName="PageIndexChanging" />
-            <asp:AsyncPostBackTrigger ControlID="button1" EventName="click" />
-        </Triggers>
-        </asp:UpdatePanel>
+                                <asp:TemplateField HeaderText="ลงวันที่" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_date").ToString() = "1/1/0544 0:00:00", "-", FormatDateTime(DataBinder.Eval(Container, "DataItem.doc_date"), 2)) %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="5%" />
+                                </asp:TemplateField>
 
-      </div>
+                                <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="ผู้ร้อง">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label1" runat="server" Text='<%#If(Eval("contact") = "T", DataBinder.Eval(Container, "DataItem.name") & " " & DataBinder.Eval(Container, "DataItem.surname"), "ไม่ระบุ") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="left" Width="15%" />
+                                </asp:TemplateField>
 
-         </div>
+                                <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="รายละเอียด">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.summary") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="left" Width="20%" />
+                                </asp:TemplateField>
 
-<!-- End Content -->
+                                <asp:TemplateField HeaderText="วันที่บันทึกข้อมูล" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label3" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.CREATE_DATE") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="8%" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="สถานะ" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Label4" runat="server" CssClass="text-success bi bi-envelope-open" Visible='<%#If(DataBinder.Eval(Container, "DataItem.STATUS").ToString() = "T", True, False) %>'></asp:Label>
+                                        <asp:Label ID="Label5" runat="server" CssClass="text-danger bi bi-envelope" Visible='<%#If(DataBinder.Eval(Container, "DataItem.STATUS").ToString() = "F", True, False) %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="5%" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="การดำเนินการ" HeaderStyle-CssClass="bg-primary text-white text-center">
+                                    <ItemTemplate>
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# String.Format("case_operation.aspx?case_code={0}", Encrypt(Eval("case_code").ToString())) %>' CssClass="bi bi-pencil-square" Target="_blank" Visible='<%# if(Eval("case_code").ToString() = "", False, True) %>'></asp:HyperLink>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="center" Width="8%" />
+                                </asp:TemplateField>
+
+                            </Columns>
+                        </asp:GridView>
+
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="GridView1" EventName="PageIndexChanging" />
+                        <asp:AsyncPostBackTrigger ControlID="button1" EventName="click" />
+                    </Triggers>
+                </asp:UpdatePanel>
+
+            </div>
+
+        </div>
+
+        <!-- End Content -->
 
 
 
-                <!-- Footer  -->
-        <inc2:MyUserControl id="MyUserControl" runat="server" />
-             <!-- Footer  -->
+        <!-- Footer  -->
+        <%--<inc2:MyUserControl id="MyUserControl" runat="server" />--%>
+        <inc2:MyUserControl id="footer2" runat="server" />
+        <!-- Footer  -->
 
 
 
 
         <!-- Modal -->
         <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">ข้อความแจ้งเตือน!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-         <% If Request.QueryString("saved") = "y" Then%>
-         <i class="bi bi-save2"></i> <h3>บันทึกข้อมูลเรียบร้อยแล้ว</h3><br /> <h2>เลขที่รับเรื่อง <%=Request.QueryString("case_code")%></h2>
-		  <%End If%>
-      </div>
-      <div class="modal-footer">
-           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">ข้อความแจ้งเตือน!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <% If Request.QueryString("saved") = "y" Then%>
+                        <i class="bi bi-save2"></i>
+                        <h3>บันทึกข้อมูลเรียบร้อยแล้ว</h3>
+                        <br />
+                        <h2>เลขที่รับเรื่อง <%=Request.QueryString("case_code")%></h2>
+                        <%End If%>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Modal -->
 
         <script src="bootstrap.bundle.min.js"></script>
 
-</form>
+    </form>
 </body>
 </html>

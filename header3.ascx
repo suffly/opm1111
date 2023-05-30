@@ -10,7 +10,7 @@
   <div class="container-fluid">
 
     <a class="navbar-brand text-white" href="#">
-      <img src="images/opm-logo.png" alt="" width="48" height="48"> Parliament Dashboard</a>
+      <img src="images/c4mlogo.png" alt="" width="48" height="48"> Parliament Dashboard</a>
     
 
   </div>

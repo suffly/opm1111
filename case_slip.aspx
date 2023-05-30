@@ -139,8 +139,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="images/opm-logo.png" type="image/png" />
-    <title></title>
+    <link rel="shortcut icon" href="images/c4mlogo.png" type="image/png" />
+    <title> C4M </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">
@@ -167,12 +167,14 @@
 
      <div class="row">
             <div class="col-2 mt-4">
+              <%--เลือกรูปหัวใส่ในใบนำส่ง--%>
               <img src="http://180.180.244.31/opm1111/images/image001.png" width="100" height="100">
             </div>
             <div class="col-10">
-                    <h3 class="text-black mt-5">ใบนำส่งเรื่องร้องเรียน</h3>
-                        <h6 class="text-black">สำนักงานเลขาธิการสภาผู้แทนราษฎร เลขที่ 1111 ถนนสามเสน แขวงถนนนครไชยศรี</h6> 
-                    <h6 class="text-black">เขตดุสิต กรุงเทพฯ 10300 โทร. 0 2242 5900 ต่อ 5041</h6>
+                    <h3 class="text-black mt-5">ใบนำส่งข้อปรึกษาหารือของสมาชิกสภาผู้แทนราษฎร</h3>
+                    <h6 class="text-black">สำนักงานเลขาธิการสภาผู้แทนราษฎร</h6> 
+                    <h6 class="text-black">เลขที่ 1111 ถนนสามเสน แขวงถนนนครไชยศรี เขตดุสิต กรุงเทพมหานคร 10300</h6> 
+                    <h6 class="text-black">โทร. 0 2242 5900 ต่อ 5041</h6>
             </div>
      </div>
 
@@ -185,9 +187,10 @@
               วันที่ <%#FormatDateTime(Eval("create_date"), 1) %>
             </div>
     </div>
-
-<p class="text-black">เรื่อง ขอให้แก้ไขปัญหาความเดือดร้อนของประชาชน</p>
-<p class="text-black">กราบเรียน นายกรัฐมนตรี</p>
+<%--Insert Topic--%>
+<p class="text-black">เรื่อง ขอให้แก้ไขปัญหาความเดือดร้อนของประชาชน (<%# Eval("doc_number") %>)</p>
+<%--Insert involed--%>
+<p class="text-black">กราบเรียน นายกรัฐมนตรี (<%# Eval("Gname") %> <%# Eval("Gsurname") %>) </p>
 
 
 <p style="text-indent:50px" class="text-black">ด้วย <%# Eval("titlename") %><%# Eval("name") %>&nbsp;<%# Eval("surname") %>&nbsp; ได้มีหนังสือกราบเรียนประธานรัฐสภา/ประธานสภาผู้แทนราษฎร เพื่อขอให้แก้ไขปัญหาเรื่องร้องเรียนร้องทุกข์กรณี <%# Eval("summary") %> รายละเอียดปรากฏตามเอกสารที่แนบมาพร้อมนี้</p>

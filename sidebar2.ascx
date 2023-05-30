@@ -42,15 +42,15 @@
                 <li><a class="dropdown-item" href="logout.aspx">Sign out</a></li>
             </ul>
         </div>
-    <div>
+        <div>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
-            <span class="badge badge-primary">Refresh <%=FormatDateTime(Now.AddMinutes(15), 4)%></span>
-            <asp:Timer ID="Timer1" runat="server" Interval="1020000"/>
-            </ContentTemplate>
+                <ContentTemplate>
+                    <span class="badge badge-primary">Refresh <%=FormatDateTime(Now.AddMinutes(15), 4)%></span>
+                    <asp:Timer ID="Timer1" runat="server" Interval="1020000"/>
+                </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-    </div>
+</div>
 
 
 

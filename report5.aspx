@@ -136,8 +136,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="images/opm-logo.png" type="image/png" />
-    <title>PSC 1111 Web Portal</title>
+    <link rel="shortcut icon" href="images/c4mlogo.png" type="image/png" />
+    <title> C4M </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">

@@ -21,20 +21,20 @@
         <li class="nav-item">
           <a class="nav-link" href="case.aspx"><i class="bi bi-briefcase text-white"></i> ข้อปรึกษาหารือ </a>
         </li>
-          <%If Session("strRole") = "2" Then %>
+          <%--<%If Session("strRole") = "2" Then %>--%>
         <li class="nav-item">
           <a class="nav-link" href="newcase.aspx"><i class="bi bi-file-earmark-plus text-white"></i> เพิ่มข้อปรึกษาหารือ </a>
         </li>
-            <%End if %>
+            <%--<%End if %>--%>
            <li class="nav-item">
           <a class="nav-link" href="report.aspx"><i class="bi bi-journal-richtext text-white"></i>  รายงาน </a>
         </li>
 
-          <%If Session("strRole") = "3" Then %>
+          <%--<%If Session("strRole") = "3" Then %>--%>
             <li class="nav-item">
           <a class="nav-link" href="setting.aspx"><i class="bi bi-gear text-white"></i>  ตั้งค่าระบบ </a>
         </li>
-           <%End if %>
+           <%--<%End if %>--%>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
