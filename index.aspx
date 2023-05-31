@@ -115,11 +115,11 @@
 
     
     <!-- Login -->
-        <br /><br /><br />
+        <br /><br /><br /> <br /><br /><br /> 
 
-    <div id="login1" class="col d-flex justify-content-center">
+    <div id="login1" class="col d-flex justify-content-center ">
 
-        <div class="card border-primary col-xs-12 col-md-4">
+        <div class="card border-primary col-xs-12 col-md-3">
          <div class="card-header">Login</div>
         <div class="card-body">
           <div class="form-group align-content-center">
@@ -145,7 +145,7 @@
         </div>
   
     </div>
-        <br /><br /><br /><br /><br /><br />
+        <br /><br /><br /> <br /><br /><br /> 
 
               <!-- Footer  -->
         <%--<inc2:MyUserControl id="MyUserControl" runat="server" />--%>

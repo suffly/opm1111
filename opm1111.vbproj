@@ -149,6 +149,7 @@
     <Content Include="header2.ascx" />
     <Content Include="header3.ascx" />
     <Content Include="index.aspx" />
+    <Content Include="index1.aspx" />
     <Content Include="jquery-1.4.4.min.js" />
     <Content Include="jquery-ui-1.8.10.custom.css" />
     <Content Include="jquery-ui-1.8.10.offset.datepicker.min.js" />
@@ -174,6 +175,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="index1.aspx.designer.vb">
+      <DependentUpon>index1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index1.aspx.vb">
+      <DependentUpon>index1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

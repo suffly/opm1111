@@ -10,31 +10,36 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-primary shadow">
   <div class="container-fluid">
 
-    <a class="navbar-brand text-white" href="#">
-      <img src="images/pmlogo.png" alt="" width="48" height="48"></a>
+    <a class="navbar-brand text-white" href="case.aspx">
+      <img src="images/pmlogo.png" alt="" width="60" height="60"></a>
       <div class="nav-item">
-          <a style="font-size: 15px;">Consultation Management System for Members of the House of Representatives (C4M)</a>
+          <p class="my-0" style="font-size: 16px;">ระบบจัดการข้อปรึกษาหารือของสมาชิกสภาผู้แทนราษฎร</p>
+          <p class="my-0" style="font-size: 13px;">Consultation Management System for Members of the House of Representatives (C4M)</p>
       </div>
+
       <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <%If Session("strUser") <> "" Then %>
         <li class="nav-item">
-          <a class="nav-link" href="case.aspx"><i class="bi bi-briefcase text-white"></i> ข้อปรึกษาหารือ </a>
+          <a class="nav-link" href="case.aspx"><i class="bi bi-briefcase text-white"></i> ข้อปรึกษาหารือ</a>
         </li>
           <%--<%If Session("strRole") = "2" Then %>--%>
         <li class="nav-item">
-          <a class="nav-link" href="newcase.aspx"><i class="bi bi-file-earmark-plus text-white"></i> เพิ่มข้อปรึกษาหารือ </a>
+          <a class="nav-link" href="newcase.aspx"><i class="bi bi-file-earmark-plus text-white"></i> เพิ่มข้อปรึกษาหารือ</a>
         </li>
             <%--<%End if %>--%>
            <li class="nav-item">
-          <a class="nav-link" href="report.aspx"><i class="bi bi-journal-richtext text-white"></i>  รายงาน </a>
+          <a class="nav-link" href="report.aspx"><i class="bi bi-journal-richtext text-white"></i>  รายงาน</a>
         </li>
 
           <%--<%If Session("strRole") = "3" Then %>--%>
             <li class="nav-item">
-          <a class="nav-link" href="setting.aspx"><i class="bi bi-gear text-white"></i>  ตั้งค่าระบบ </a>
+          <a class="nav-link" href="setting.aspx"><i class="bi bi-gear text-white"></i>  ตั้งค่าระบบ</a>
         </li>
            <%--<%End if %>--%>
+          <li class="nav-item">
+          <a class="nav-link" href="index1.aspx"><i class="bi bi-gear text-white"></i>  ทดสอบ</a>
+        </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

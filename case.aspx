@@ -405,12 +405,15 @@
         <inc1:MyUserControl id="Header2" runat="server" />
         <!-- Header  -->
 
+        <div class="container-fluid bg-light my-4"></div>
+
         <div class="progress" id="progressbar1">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
         </div>
 
         <!-- Content-->
-        <div class="card text-dark bg-light mx-auto col-lg-10 col-sm-12">
+        <%--<div class="card text-dark bg-light mx-auto my-5 col-lg-10 col-sm-12">--%>
+        <div class="card text-dark bg-light mx-auto col-lg-11 col-sm-12">
 
             <div class="card-header bg-primary">
                 <div class="d-flex justify-content-between">
