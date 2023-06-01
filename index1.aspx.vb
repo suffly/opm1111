@@ -1,15 +1,12 @@
-﻿Imports System.Collections.Generic
-Imports System.Data
+﻿Imports System.Data
 Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.IO
-
 
 Public Class index1
     Inherits System.Web.UI.Page
 
     Sub login_onClick(ByVal sender As Object, ByVal e As EventArgs)
-
         Dim objConn As MySqlConnection
         Dim dtAdapter As New MySqlDataAdapter
         Dim dt As New DataTable
@@ -19,9 +16,12 @@ Public Class index1
 
         objConn = New MySqlConnection(strConnString)
         objConn.Open()
-        strSQL = "SELECT gid, grole,gemail FROM Gmember WHERE gemail = '" & Request.Form("gemail") & "' and gpassword='" & Request.Form("gpassword") & "' "
 
-        'strSQL = "SELECT gid, grole,gemail FROM Gmember WHERE gemail = '" & Me.RFVgemail.ToString & "' and gpassword='" & Me.RFVgpassword.ToString & "' "
+        'strSQL = "SELECT gid,grole,gemail FROM Gmember WHERE gemail = '" & Request.Form("gemail") & "' and gpassword='" & Request.Form("gpassword") & "' "
+        strSQL = $"SELECT gid,grole,gemail FROM Gmember WHERE gemail = '{Request.Form("gemail")}' and gpassword='{Request.Form("gpassword")}' "
+        'strSQL = "SELECT gid,grole,gemail FROM Gmember WHERE gemail = '" & Me.RFVgemail.ToString & "' and gpassword='" & Me.RFVgpassword.ToString & "' "
+        'strSQL = "SELECT gid,grole,gemail FROM Gmember WHERE gemail = '" & RFVgemail.Text & "' and gpassword='" & Me.RFVgpassword.Text & "' "
+
         dtAdapter = New MySqlDataAdapter(strSQL, objConn)
         dtAdapter.Fill(dt)
 
@@ -51,23 +51,16 @@ Public Class index1
 
             objCmd.ExecuteNonQuery()
             objCmd = Nothing
-
             dtAdapter = Nothing
-
             objConn.Close()
             objConn = Nothing
-
 
             '############Login Complete################
-            Response.Redirect("newcase.aspx")
-
+            Response.Redirect("case1.aspx")
         Else
-
             dtAdapter = Nothing
-
             objConn.Close()
             objConn = Nothing
-
             Me.lbLogin.Visible = True
             Me.lbLogin.Text = "อีเมล์หรือรหัสผ่านไม่ถูกต้อง โปรดลองใหม่อีกครั้ง"
         End If
@@ -77,8 +70,5 @@ Public Class index1
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
-
-
-
 
 End Class

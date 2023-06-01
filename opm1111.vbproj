@@ -137,6 +137,7 @@
     <Content Include="bootstrap.bundle.min.js" />
     <Content Include="bootstrap.css" />
     <Content Include="case.aspx" />
+    <Content Include="case1.aspx" />
     <Content Include="casestatus.aspx" />
     <Content Include="casetype.aspx" />
     <Content Include="case_detail.aspx" />
@@ -160,6 +161,7 @@
     <Content Include="member.aspx" />
     <Content Include="menu.ascx" />
     <Content Include="newcase.aspx" />
+    <Content Include="newcase1.aspx" />
     <Content Include="partylist.aspx" />
     <Content Include="report.aspx" />
     <Content Include="report1.aspx" />
@@ -175,6 +177,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="case1.aspx.designer.vb">
+      <DependentUpon>case1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="case1.aspx.vb">
+      <DependentUpon>case1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="index1.aspx.designer.vb">
       <DependentUpon>index1.aspx</DependentUpon>
     </Compile>
@@ -200,6 +209,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="newcase1.aspx.designer.vb">
+      <DependentUpon>newcase1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newcase1.aspx.vb">
+      <DependentUpon>newcase1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

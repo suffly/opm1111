@@ -3,7 +3,7 @@
 <%@Register Src = "footer2.ascx" TagName="MyUserControl" TagPrefix="inc2"%>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head runat="server">
     
     <meta charset="utf-8"/>
@@ -13,13 +13,13 @@
     <link rel="shortcut icon" href="images/c4mlogo.png" type="image/png" />
     <title> C4M </title>
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet"/>
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style1.css"/>
+    <!-- Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
     <!-- Jquery -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-    <!-- Icon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 </head>
 <body>
