@@ -123,7 +123,7 @@ Public Class case1
 
     End Sub
 
-    Public Function Decrypt(cipherText As String) As String
+    Private Function Decrypt(cipherText As String) As String
         Dim EncryptionKey As String = "GECC2565"
         cipherText = cipherText.Replace(" ", "+")
         Dim cipherBytes As Byte() = Convert.FromBase64String(cipherText)
@@ -144,7 +144,7 @@ Public Class case1
         Return cipherText
     End Function
 
-    Public Function Encrypt(clearText As String) As String
+    Private Function Encrypt(clearText As String) As String
         Dim EncryptionKey As String = "GECC2565"
         Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(clearText)
         Using encryptor As Aes = Aes.Create()
