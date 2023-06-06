@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class setting1
+Partial Public Class case_slip1
 
     '''<summary>
     '''form1 control.
@@ -23,29 +23,20 @@ Partial Public Class setting1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Header2 control.
+    '''panel1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Header2 As Global.System.Web.UI.UserControl
+    Protected WithEvents panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''Menu control.
+    '''listview1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Menu As Global.System.Web.UI.UserControl
-
-    '''<summary>
-    '''footer2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents footer2 As Global.System.Web.UI.UserControl
+    Protected WithEvents listview1 As Global.System.Web.UI.WebControls.DataList
 End Class

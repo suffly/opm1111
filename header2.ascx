@@ -49,7 +49,7 @@
                             <asp:Label ID="lbUser" runat="server"></asp:Label>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="gmember_edit.aspx"><i class="bi bi-journal-richtext"></i> ข้อมูลผู้ใช้งาน </a></li>
+                            <li><a class="dropdown-item" href="gmember_edit1.aspx"><i class="bi bi-journal-richtext"></i> ข้อมูลผู้ใช้งาน </a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.aspx"><i class="bi bi-x-circle-fill"></i> ออกจากระบบ </a></li>
                         </ul>

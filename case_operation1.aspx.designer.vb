@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class setting1
+Partial Public Class case_operation1
 
     '''<summary>
     '''form1 control.
@@ -32,13 +32,22 @@ Partial Public Class setting1
     Protected WithEvents Header2 As Global.System.Web.UI.UserControl
 
     '''<summary>
-    '''Menu control.
+    '''listview1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Menu As Global.System.Web.UI.UserControl
+    Protected WithEvents listview1 As Global.System.Web.UI.WebControls.DataList
+
+    '''<summary>
+    '''listview2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents listview2 As Global.System.Web.UI.WebControls.Repeater
 
     '''<summary>
     '''footer2 control.

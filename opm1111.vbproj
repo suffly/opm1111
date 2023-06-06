@@ -55,6 +55,10 @@
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
@@ -67,6 +71,7 @@
     <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.33\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -139,15 +144,21 @@
     <Content Include="case.aspx" />
     <Content Include="case1.aspx" />
     <Content Include="casestatus.aspx" />
+    <Content Include="casestatus1.aspx" />
     <Content Include="casetype.aspx" />
+    <Content Include="casetype1.aspx" />
     <Content Include="case_detail.aspx" />
+    <Content Include="case_detail1.aspx" />
     <Content Include="case_operation.aspx" />
+    <Content Include="case_operation1.aspx" />
     <Content Include="case_slip.aspx" />
+    <Content Include="case_slip1.aspx" />
     <Content Include="channel.aspx" />
     <Content Include="channel1.aspx" />
     <Content Include="footer2.ascx" />
     <Content Include="Global.asax" />
     <Content Include="gmember_edit.aspx" />
+    <Content Include="gmember_edit1.aspx" />
     <Content Include="header2.ascx" />
     <Content Include="header3.ascx" />
     <Content Include="index.aspx" />
@@ -189,11 +200,53 @@
       <DependentUpon>case1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="casestatus1.aspx.designer.vb">
+      <DependentUpon>casestatus1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="casestatus1.aspx.vb">
+      <DependentUpon>casestatus1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="casetype1.aspx.designer.vb">
+      <DependentUpon>casetype1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="casetype1.aspx.vb">
+      <DependentUpon>casetype1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="case_detail1.aspx.designer.vb">
+      <DependentUpon>case_detail1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="case_detail1.aspx.vb">
+      <DependentUpon>case_detail1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="case_operation1.aspx.designer.vb">
+      <DependentUpon>case_operation1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="case_operation1.aspx.vb">
+      <DependentUpon>case_operation1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="case_slip1.aspx.designer.vb">
+      <DependentUpon>case_slip1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="case_slip1.aspx.vb">
+      <DependentUpon>case_slip1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="channel1.aspx.designer.vb">
       <DependentUpon>channel1.aspx</DependentUpon>
     </Compile>
     <Compile Include="channel1.aspx.vb">
       <DependentUpon>channel1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="gmember_edit1.aspx.designer.vb">
+      <DependentUpon>gmember_edit1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gmember_edit1.aspx.vb">
+      <DependentUpon>gmember_edit1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="index1.aspx.designer.vb">

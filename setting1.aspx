@@ -57,7 +57,7 @@
         </main>
         <!-- End Content -->
         <!-- Footer  -->
-        <inc2:MyUserControl id="MyUserControl" runat="server" />
+        <inc2:MyUserControl id="footer2" runat="server" />
         <!-- Footer  -->
         <!-- Modal -->
         <!-- Modal -->
