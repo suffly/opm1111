@@ -30,12 +30,12 @@
                     <%--<%End if %>--%>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="report.aspx"><i class="bi bi-journal-richtext text-white"></i>  รายงาน</a>
+                        <a class="nav-link" href="report0.aspx"><i class="bi bi-journal-richtext text-white"></i>  รายงาน</a>
                     </li>
 
                     <%--<%If Session("strRole") = "3" Then %>--%>
                     <li class="nav-item">
-                        <a class="nav-link" href="setting.aspx"><i class="bi bi-gear text-white"></i>  ตั้งค่าระบบ</a>
+                        <a class="nav-link" href="setting1.aspx"><i class="bi bi-gear text-white"></i>  ตั้งค่าระบบ</a>
                     </li>
                     <%--<%End if %>--%>
 

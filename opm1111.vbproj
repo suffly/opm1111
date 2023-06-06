@@ -144,6 +144,7 @@
     <Content Include="case_operation.aspx" />
     <Content Include="case_slip.aspx" />
     <Content Include="channel.aspx" />
+    <Content Include="channel1.aspx" />
     <Content Include="footer2.ascx" />
     <Content Include="Global.asax" />
     <Content Include="gmember_edit.aspx" />
@@ -159,17 +160,21 @@
     <Content Include="jquery.MultiFile.js" />
     <Content Include="logout.aspx" />
     <Content Include="member.aspx" />
+    <Content Include="member1.aspx" />
     <Content Include="menu.ascx" />
     <Content Include="newcase.aspx" />
     <Content Include="newcase1.aspx" />
     <Content Include="partylist.aspx" />
+    <Content Include="partylist1.aspx" />
     <Content Include="report.aspx" />
+    <Content Include="report0.aspx" />
     <Content Include="report1.aspx" />
     <Content Include="report2.aspx" />
     <Content Include="report3.aspx" />
     <Content Include="report4.aspx" />
     <Content Include="report5.aspx" />
     <Content Include="setting.aspx" />
+    <Content Include="setting1.aspx" />
     <Content Include="sidebar2.ascx" />
     <Content Include="sidebars.css" />
     <Content Include="sidebars.js" />
@@ -184,12 +189,26 @@
       <DependentUpon>case1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="channel1.aspx.designer.vb">
+      <DependentUpon>channel1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="channel1.aspx.vb">
+      <DependentUpon>channel1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="index1.aspx.designer.vb">
       <DependentUpon>index1.aspx</DependentUpon>
     </Compile>
     <Compile Include="index1.aspx.vb">
       <DependentUpon>index1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="member1.aspx.designer.vb">
+      <DependentUpon>member1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="member1.aspx.vb">
+      <DependentUpon>member1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -215,6 +234,27 @@
     </Compile>
     <Compile Include="newcase1.aspx.vb">
       <DependentUpon>newcase1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="partylist1.aspx.designer.vb">
+      <DependentUpon>partylist1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="partylist1.aspx.vb">
+      <DependentUpon>partylist1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="report0.aspx.designer.vb">
+      <DependentUpon>report0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report0.aspx.vb">
+      <DependentUpon>report0.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="setting1.aspx.designer.vb">
+      <DependentUpon>setting1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="setting1.aspx.vb">
+      <DependentUpon>setting1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
