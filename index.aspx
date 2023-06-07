@@ -64,7 +64,7 @@
 
             '############Login Complete################
 
-            Response.Redirect("case.aspx")
+            Response.Redirect("case1.aspx")
 
         Else
 

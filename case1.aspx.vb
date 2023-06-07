@@ -16,6 +16,8 @@ Public Class case1
             DropDownListChannel()
             DropDownFastLevel()
             DropDownListCreateby()
+
+
         End If
         BindGrid()
     End Sub
@@ -266,5 +268,12 @@ Public Class case1
         BindGrid(e.SortExpression, casecode.Text, doc_number.Text, datepicker.Text, contactname.Text, contactsurname.Text, channel.SelectedItem.Value, fast_level.SelectedItem.Value, summary.Text, remark.Text, createby.Text, chkstatus.Text)
     End Sub
 
-
+    Private Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridView1.RowDataBound
+        If e.Row.RowType = DataControlRowType.DataRow Then
+            Dim hyperlnk As System.Web.UI.WebControls.HyperLink = e.Row.FindControl("Hyperlink1")
+            If (Not e.Row.Cells(0).Text Is Nothing) And (e.Row.Cells(0).Text <> "&nbsp;") And (Not e.Row.Cells(0).Text Is DBNull.Value) Then
+                hyperlnk.NavigateUrl = String.Format("./case_detail.aspx?case_id={0}", Encrypt(e.Row.Cells(0).ToString()))
+            End If
+        End If
+    End Sub
 End Class

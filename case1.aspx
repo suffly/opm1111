@@ -2,6 +2,7 @@
 <%@ Register Src="header2.ascx" TagName="MyUserControl" TagPrefix="inc1" %>
 <%@ Register Src="footer2.ascx" TagName="MyUserControl" TagPrefix="inc2" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -213,35 +214,36 @@
 
                                 <asp:TemplateField HeaderText="รหัสเรื่อง" HeaderStyle-CssClass="bg-primary text-white text-center">
                                     <ItemTemplate>
-                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<% # String.Format("case_detail.aspx?case_id={0}", Encrypt(Eval("case_id").ToString()))%>' Text='<%# DataBinder.Eval(Container, "DataItem.case_id") %>'></asp:HyperLink>
+                                        <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<% # String.Format("case_detail.aspx?case_id={0}", Encrypt(Eval("case_id").ToString()))%>' Text='<%# DataBinder.Eval(Container, "DataItem.case_id") %>'></asp:HyperLink>--%>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.case_id")%>'></asp:HyperLink>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="center" Width="5%" />
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="เลขรับคำร้อง" HeaderStyle-CssClass="bg-primary text-white text-center">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_number") = "", "-", Eval("doc_number")) %>'></asp:Label>
+                                        <asp:Label ID="Label11" runat="server" Text='<%# If(Eval("doc_number") = "", "-", Eval("doc_number")) %>'></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="center" Width="8%" />
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="ลงวันที่" HeaderStyle-CssClass="bg-primary text-white text-center">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server" Text='<%# If(Eval("doc_date").ToString() = "1/1/0544 0:00:00", "-", FormatDateTime(DataBinder.Eval(Container, "DataItem.doc_date"), 2)) %>'></asp:Label>
+                                        <asp:Label ID="Label12" runat="server" Text='<%# If(Eval("doc_date").ToString() = "1/1/0544 0:00:00", "-", FormatDateTime(DataBinder.Eval(Container, "DataItem.doc_date"), 2)) %>'></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="center" Width="5%" />
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="ผู้ร้อง">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server" Text='<%#If(Eval("contact") = "T", DataBinder.Eval(Container, "DataItem.name") & " " & DataBinder.Eval(Container, "DataItem.surname"), "ไม่ระบุ") %>'></asp:Label>
+                                        <asp:Label ID="Label13" runat="server" Text='<%#If(Eval("contact") = "T", DataBinder.Eval(Container, "DataItem.name") & " " & DataBinder.Eval(Container, "DataItem.surname"), "ไม่ระบุ") %>'></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="left" Width="15%" />
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderStyle-CssClass="bg-primary text-white text-center" HeaderText="รายละเอียด">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.summary") %>'></asp:Label>
+                                        <asp:Label ID="Label14" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.summary") %>'></asp:Label>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="left" Width="20%" />
                                 </asp:TemplateField>
@@ -263,7 +265,7 @@
 
                                 <asp:TemplateField HeaderText="การดำเนินการ" HeaderStyle-CssClass="bg-primary text-white text-center">
                                     <ItemTemplate>
-                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# String.Format("case_operation.aspx?case_code={0}", Encrypt(Eval("case_code").ToString())) %>' CssClass="bi bi-pencil-square" Target="_blank" Visible='<%# if(Eval("case_code").ToString() = "", False, True) %>'></asp:HyperLink>
+                                        <%--<asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# String.Format("case_operation.aspx?case_code={0}", Encrypt(Eval("case_code").ToString())) %>' CssClass="bi bi-pencil-square" Target="_blank" Visible='<%# if(Eval("case_code").ToString() = "", False, True) %>'></asp:HyperLink>--%>
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="center" Width="8%" />
                                 </asp:TemplateField>
